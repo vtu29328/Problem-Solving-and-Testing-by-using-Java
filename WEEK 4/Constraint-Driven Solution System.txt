@@ -1,0 +1,33 @@
+Constraint-Driven Solution System
+
+CODE:
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int balance = 1000;
+
+        System.out.print("Enter deposit: ");
+        int deposit = sc.nextInt();
+
+        if (deposit > 0)
+            balance += deposit;
+
+        System.out.print("Enter withdrawal: ");
+        int withdraw = sc.nextInt();
+
+        if (withdraw > 0 && withdraw <= balance)
+            balance -= withdraw;
+        else
+            System.out.println("Invalid transaction");
+
+        System.out.println("Final Balance = " + balance);
+    }
+}
+
+
+OUTPUT:
+Enter deposit: 3000
+Enter withdrawal: 500
+Final Balance = 3500

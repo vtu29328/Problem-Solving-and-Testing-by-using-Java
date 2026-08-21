@@ -1,0 +1,32 @@
+banking transaction system
+
+CODE:
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int balance = 1000;
+
+        System.out.println("1.Deposit  2.Withdraw  3.Balance");
+        int ch = sc.nextInt();
+
+        if (ch == 1) {
+            int amount = sc.nextInt();
+            balance += amount;
+        } 
+        else if (ch == 2) {
+            int amount = sc.nextInt();
+            if (amount <= balance)
+                balance -= amount;
+            else
+                System.out.println("Insufficient Balance");
+        }
+
+        System.out.println("Balance = " + balance);
+    }
+}
+
+OUTPUT:
+1.Deposit  2.Withdraw  3.Balance
+
